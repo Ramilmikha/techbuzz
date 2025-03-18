@@ -1,34 +1,70 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+android:background="@drawable/screen"
+    android:padding="16dp" >
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+<TextView
+android:id="@+id/textViewHelloUser"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Hello User!"
+    android:textStyle="bold"
+android:textSize="50sp"
+android:textColor="@color/white"
+    android:layout_alignParentStart="true" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+<TextView
+android:id="@+id/textViewWelcome"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Welcome to Tech Buzz"
+    android:textStyle="bold"
+android:textSize="30sp"
+android:textColor="@color/white"
+android:layout_below="@id/textViewHelloUser"
+    android:layout_alignParentStart="true"
+android:layout_marginTop="8dp" />
 
-    <Button
-        android:id="@+id/buttonSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up" />
+<EditText
+android:id="@+id/editTextEmail"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+android:layout_below="@id/textViewWelcome"
+android:hint="Email"
+android:layout_marginTop="150dp" />
 
-    <TextView
-        android:id="@+id/textViewLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account? Log In"
-        android:textColor="@color/teal_700"
-        android:paddingTop="16dp" />
-</LinearLayout>
+<EditText
+android:id="@+id/editTextPassword"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+android:layout_below="@id/editTextEmail"
+android:hint="@string/password"
+android:inputType="textPassword"
+android:layout_marginTop="16dp"
+    android:drawablePadding="8dp" />
+
+<Button
+android:id="@+id/buttonSignIn"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/editTextPassword"
+android:text="@string/sign_in"
+    android:textSize="18sp"
+    android:textStyle="bold"
+android:layout_marginTop="16dp" />
+
+<TextView
+android:id="@+id/textViewLogin"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/buttonSignIn"
+android:layout_centerHorizontal="true"
+    android:textSize="18sp"
+android:text="@string/already_have_an_account_login"
+android:textColor="@android:color/holo_blue_light"
+android:layout_marginTop="16dp" />
+
+
+    </RelativeLayout>

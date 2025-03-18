@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -41,9 +40,9 @@
                 android:id="@+id/buttonlog_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="#03A9F4"
-                android:padding="16dp"
+                android:layout_marginEnd="2dp"
+                android:padding="3dp"
+                android:background="@drawable/rounded_button"
                 android:text="Log In"
                 android:textColor="#5E35B1"
                 android:textStyle="bold"/>
@@ -51,28 +50,28 @@
                 android:id="@+id/sign_up_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="#03A9F4"
-                android:padding="10dp"
+                android:layout_marginEnd="2dp"
+                android:padding="0dp"
                 android:text="Sign Up"
+                android:background="@drawable/rounded_button"
                 android:textColor="#5E35B1"
                 android:textStyle="bold"/>
             <Button
                 android:id="@+id/view_eventsbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="#03A9F4"
+                android:layout_marginEnd="1dp"
+                android:padding="5dp"
+                android:background="@drawable/rounded_button"
                 android:text="Explore Events"
                 android:textColor="#4A148C"/>
             <Button
                 android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
-                android:background="#03A9F4"
-                android:textColor="#5E35B1"
-                />
+                android:background="@drawable/rounded_button"
+                android:text="back"
+                android:textColor="#5E35B1"/>
         </LinearLayout>
 
         <!-- Search Bar -->
@@ -87,8 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Search"
+                android:background="@drawable/rounded_button"
                 android:layout_marginStart="8dp"
-                android:background="#03A9F4"
                 android:textColor="@android:color/white"/>
             <EditText
                 android:id="@+id/search_input"
@@ -104,9 +103,6 @@
                 android:paddingEnd="48dp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
-
-        <!-- Back Button -->
-
 
         <!-- Available Events Section -->
         <TextView
@@ -130,47 +126,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                app:cardBackgroundColor="#03A9F4"
+                app:cardBackgroundColor="@color/white"
                 app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/cyber"
+                        android:contentDescription="Cybersecurity Event"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Event Name: Cybersecurity"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location: Kasarani"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date: 22/3/2025"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time: 10:00 AM - 12:00 PM"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Price: ksh:3000"
-                        android:textColor="@android:color/white"/>
-                    <Button
-                        android:id="@+id/buy_ticket_button_1"
-                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/black"/>
+
+                    <!-- Centered Buy Ticket Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <Button
+                            android:id="@+id/buy_ticket_button_1"
+                            android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:background="#03A9F4"
+                            android:background="@drawable/rounded_button"
                         android:text="Buy Ticket"
-                        android:textColor="#4A148C"/>
+                        android:textColor="@android:color/white"/>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -179,47 +189,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                app:cardBackgroundColor="#03A9F4"
+                app:cardBackgroundColor="@android:color/white"
                 app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/design"
+                        android:contentDescription="Web Design Event"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Event Name: Web Design"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location: Nyayo Stadium"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date: 24/3/2025"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time: 2:00 PM - 4:00 PM"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price:ksh :1000"
-                        android:textColor="@android:color/white"/>
-                    <Button
-                        android:id="@+id/buy_ticket_button_2"
-                        android:layout_width="wrap_content"
+                        android:text="Price: ksh: 1000"
+                        android:textColor="@android:color/black"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <Button
+                            android:background="@drawable/rounded_button"
+                            android:id="@+id/buy_ticket_button_2"
+                            android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:background="#03A9F4"
                         android:text="Buy Ticket"
-                        android:textColor="#4A148C"/>
+                        android:textColor="@android:color/white"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -228,47 +253,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                app:cardBackgroundColor="#03A9F4"
+                app:cardBackgroundColor="@android:color/white"
                 app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ai"
+                        android:contentDescription="AI Workshop Event"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Event Name: AI Workshop"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location: Mombasa"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date: 25/3/2025"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time: 1:00 PM - 3:00 PM"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price:ksh: 4000"
-                        android:textColor="@android:color/white"/>
-                    <Button
-                        android:id="@+id/buy_ticket_button_3"
-                        android:layout_width="wrap_content"
+                        android:text="Price: ksh: 4000"
+                        android:textColor="@android:color/black"/>
+
+                    <!-- Centered Buy Ticket Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <Button
+                            android:id="@+id/buy_ticket_button_3"
+                            android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:background="#03A9F4"
+                            android:background="@drawable/rounded_button"
                         android:text="Buy Ticket"
-                        android:textColor="#4A148C"/>
+                        android:textColor="@android:color/white"/>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

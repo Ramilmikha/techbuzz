@@ -4,27 +4,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
     android:background="@color/white"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:layout_gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
+        <!-- Title -->
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome to TechBuzz 🎉"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="@color/blue"
+            android:textColor="@color/black"
             android:gravity="center"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_marginBottom="8dp"/>
 
+        <!-- Message -->
         <TextView
             android:id="@+id/messageTextView"
             android:layout_width="wrap_content"
@@ -32,37 +36,56 @@
             android:text="To access the home page, click 'View Events'.\nIf you don't have an account, please Sign in."
             android:textSize="16sp"
             android:textColor="@color/blue"
-            android:layout_marginTop="12dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
 
-        <Button
-            android:id="@+id/btnSignIn"
-            android:layout_width="match_parent"
+        <!-- Horizontal Layout for Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
-            android:textStyle="bold"
-            android:backgroundTint="#03A9F4"
-            android:textColor="#fff"
-            android:layout_marginTop="16dp"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
 
-        <Button
-            android:id="@+id/btnViewEvents"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Events"
-            android:textStyle="bold"
-            android:backgroundTint="#03A9F4"
-            android:textColor="#fff"
-            android:layout_marginTop="8dp"/>
+            <!-- Sign In Button -->
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FF5722"
+                android:textColor="#fff"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"/>
 
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log Out"
-            android:textStyle="bold"
-            android:backgroundTint="#03A9F4"
-            android:textColor="#fff"
-            android:layout_marginTop="8dp"/>
+            <!-- View Events Button -->
+            <Button
+                android:id="@+id/btnViewEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Events"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#fff"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#607D8B"
+                android:textColor="#fff"
+                android:paddingHorizontal="16dp"/>
+        </LinearLayout>
+
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

@@ -1,61 +1,34 @@
-package com.example.techbuzzproject;
+package com.example.techbuzzproject; // Ensure this matches your package structure
 
 public class Event {
     private String name;
     private String location;
     private String date;
-    private String time;
+    private String startTime;
+    private String endTime;
     private String price;
+    private String imageUrl; // URL for the image
 
-    // Default constructor for Firebase
-    public Event() {}
+    // Default constructor required for calls to DataSnapshot.getValue(Event.class)
+    public Event() { }
 
-    public Event(String name, String location, String date, String time, String price) {
+    // Parameterized constructor for creating an event
+    public Event(String name, String location, String date, String startTime, String endTime, String price, String imageUrl) {
         this.name = name;
         this.location = location;
         this.date = date;
-        this.time = time;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.price = price;
+        this.imageUrl = imageUrl; // Assign image URL
     }
 
-    // Getters and setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
+    // Getters for accessing event properties
+    public String getName() { return name; }
+    public String getLocation() { return location; }
+    public String getDate() { return date; }
+    public String getStartTime() { return startTime; }
+    public String getEndTime() { return endTime; }
+    public String getPrice() { return price; }
+    public String getImageUrl() { return imageUrl; } // Getter for image URL
 }

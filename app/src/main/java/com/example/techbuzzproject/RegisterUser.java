@@ -1,76 +1,74 @@
 package com.example.techbuzzproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class RegisterUser extends AppCompatActivity {
     private EditText editTextEmail, editTextPassword;
     private FirebaseAuth mAuth;
-    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registeruser); // Ensure this matches your layout file name
 
-        // Initialize Firebase Auth and Firestore
+        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
 
         // Initialize UI elements
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
-        Button buttonSignUp = findViewById(R.id.buttonSignIn); // Should be buttonSignUp for clarity
-        TextView textViewLogin = findViewById(R.id.textViewLogin); // For navigating back to login
+        Button buttonSignUp = findViewById(R.id.buttonSignIn); // Change to buttonSignUp for clarity
+        TextView textViewLogin = findViewById(R.id.textViewLogin); // For navigating to login
 
         // Set up the sign-up button click listener
-        buttonSignUp.setOnClickListener(v -> handleRegister());
+        buttonSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleRegister();
+            }
+        });
 
-        // Set up the text view click listener to navigate back to login
-        textViewLogin.setOnClickListener(v -> finish());
+        // Set up the text view for navigating to login
+        textViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Close the RegisterUser activity, returning to Login
+            }
+        });
     }
 
     private void handleRegister() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        // Basic input validation
+        // Simple validation
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Firebase authentication and saving user to Firestore
+        // Firebase registration
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(task -> {
+                .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        String userId = mAuth.getCurrentUser().getUid();
-
-                        // Add user data with role "user" by default
-                        Map<String, Object> user = new HashMap<>();
-                        user.put("email", email);
-                        user.put("role", "user"); // Change to "admin" manually during admin registration
-
-                        db.collection("users").document(userId).set(user)
-                                .addOnSuccessListener(aVoid -> {
-                                    Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(RegisterUser.this, LogIn.class));
-                                    finish();
-                                })
-                                .addOnFailureListener(e -> Toast.makeText(this, "Error saving user data. Please try again.", Toast.LENGTH_SHORT).show());
+                        // Registration success
+                        Toast.makeText(RegisterUser.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                        // Navigate to the Home activity or another relevant activity
+                        startActivity(new Intent(RegisterUser.this, LogIn.class));
+                        finish(); // Optionally finish the RegisterUser activity
                     } else {
-                        Toast.makeText(this, "Registration Failed. Please try again.", Toast.LENGTH_SHORT).show();
+                        // If registration fails, display a message to the user.
+                        Toast.makeText(RegisterUser.this, "Registration Failed. Please try again.", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

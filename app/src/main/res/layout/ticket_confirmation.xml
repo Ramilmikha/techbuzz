@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Banner (Fixed at the Top) -->
+    <TextView
+        android:id="@+id/banner_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TECHBUZZ"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/blue"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Spacer to push content below -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <!-- Confirmation Message -->
+    <TextView
+        android:id="@+id/confirmation_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="8dp"
+        android:text="🎉 Ticket Purchased Successfully!" />
+
+    <!-- Additional Thank You Message -->
+    <TextView
+        android:id="@+id/thank_you_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Thank you for choosing TECHBUZZ Events! Check your email for ticket details." />
+
+    <!-- Go to Home Button -->
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Home"
+        android:textSize="18sp"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:elevation="4dp" />
+</LinearLayout>

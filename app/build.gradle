@@ -1,4 +1,3 @@
-// Module build.gradle (app/build.gradle)
 plugins {
     alias(libs.plugins.android.application)
     id 'com.google.gms.google-services'
@@ -31,16 +30,23 @@ android {
 }
 
 dependencies {
-    implementation libs.play.services.base
-    implementation libs.okhttp
-    implementation libs.material // Use a valid version
+    implementation 'com.google.android.material:material:1.12.0' // Use a valid version
     implementation libs.appcompat
     implementation libs.activity
     implementation libs.constraintlayout
+
+    // Firebase BOM for managing Firebase dependencies
     implementation platform(libs.firebase.bom)
+
+    // Firebase dependencies
     implementation libs.firebase.auth
     implementation libs.firebase.database
-    implementation libs.firebase.firestore
+    implementation 'com.google.firebase:firebase-storage:20.2.0' // Directly added
+
+    // Picasso for image loading
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    // Testing Libraries
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

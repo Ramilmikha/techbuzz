@@ -3,4 +3,9 @@
     android:shape="rectangle">
     <solid android:color="#03A9F4"/> <!-- Background color -->
     <corners android:radius="16dp"/> <!-- Rounded corners -->
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp"/> <!-- Padding for the button -->
 </shape>
