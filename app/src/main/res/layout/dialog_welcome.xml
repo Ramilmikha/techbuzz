@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/white"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to TechBuzz 🎉"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To access the home page, click 'View Events'.\nIf you don't have an account, please Sign in."
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:layout_marginTop="12dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textStyle="bold"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#fff"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnViewEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Events"
+            android:textStyle="bold"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#fff"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textStyle="bold"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#fff"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "822051489131",
+    "firebase_url": "https://techbuzz-8cacb-default-rtdb.firebaseio.com",
+    "project_id": "techbuzz-8cacb",
+    "storage_bucket": "techbuzz-8cacb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822051489131:android:0ce0c149945485b8b9782e",
+        "android_client_info": {
+          "package_name": "com.example.techbuzzproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB37mLnIyIC6x6OEtnkViJr3N8K5iOgTJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

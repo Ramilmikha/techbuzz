@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">techbuzzproject</string>
+    <string name="login">login</string>
+    <string name="already_have_an_account_signin">Already have an account? signin</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="browse_events">Browse Events</string>
+    <string name="my_profile">My Profile</string>
+    <string name="logout">Logout</string>
+    <string name="Dont_have_an_account_signin" />
+    <string name="welcome_to_tech_buzz">Welcome to Tech Buzz!</string>
+</resources>

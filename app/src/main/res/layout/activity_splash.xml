@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:padding="16dp">
+
+    <!-- App Logo -->
+<ImageView
+android:id="@+id/logoImageView"
+android:layout_width="150dp"
+android:layout_height="150dp"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="100dp"
+android:src="@drawable/techbuzz"
+
+    android:adjustViewBounds="true"
+    android:scaleType="fitCenter" />
+
+    <!-- App Name -->
+<TextView
+android:id="@+id/appNameTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/logoImageView"
+android:layout_centerHorizontal="true"
+android:text="TechBuzz Events"
+android:textColor="@color/blue"
+android:textSize="30sp"
+android:textStyle="bold"
+android:fontFamily="sans-serif-condensed"
+android:layout_marginTop="12dp" />
+
+    <!-- Slogan/Tagline -->
+<TextView
+android:id="@+id/taglineTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/appNameTextView"
+android:layout_centerHorizontal="true"
+android:text="Discover • Connect • Celebrate"
+android:textColor="@color/blue"
+android:textSize="20sp"
+android:textStyle="bold"
+android:fontFamily="sans-serif-light"
+android:layout_marginTop="8dp" />
+
+    <!-- Fancy Animated ProgressBar -->
+<ProgressBar
+android:id="@+id/loadingProgressBar"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:layout_alignParentBottom="true"
+android:layout_marginBottom="50dp"
+android:indeterminate="true" />
+
+    <!-- Version Number (Optional, Looks Cool) -->
+<TextView
+android:id="@+id/versionTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+android:text="v1.0"
+android:textColor="@color/blue"
+android:textSize="12sp"
+android:layout_marginBottom="20dp" />
+    </RelativeLayout>
